@@ -2,13 +2,15 @@
 
 This project contains a bare-metal implementation of Bayesian Optimization written entirely in ARM64 Assembly for Apple Silicon .
 
+> **Disclaimer:** This assembly implementation was written in a burst of exploratory energy and may contain redundant or inefficient instructions. Some parts are probably suboptimal, and a few might be wrong in ways I haven’t discovered yet. It’s what happens when curiosity meets assembly and neither side wins.
+
 ## Objective
 
 The goal of this code is to find the absolute minimum of the mathematical function:
 `f(x) = sin(3x) + x^2 - 0.7*cos(5x)`
 within the bounded range `x ∈ [-2, 2]`.
 
-Instead of running a naive loop over thousands of points or using standard gradient descent, it implements a smart probabilistic search algorithm that hones in on the deepest valley with as few evaluations of `f(x)` as possible.
+Instead of running a loop over thousands of points or using standard gradient descent, it implements a probabilistic search algorithm that hones in on the deepest valley with as few evaluations of `f(x)` as possible.
 
 ## Core Components
 
