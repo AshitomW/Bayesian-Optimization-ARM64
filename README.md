@@ -36,7 +36,7 @@ clang -arch arm64 -o bayesian_opt bys.s
 ./bayesian_opt
 ```
 
-## Expected Output
+##  Output
 
 The code gives this as output (note: it could be wrong, verify the math yourself!):
 
